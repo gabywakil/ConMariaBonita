@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: linear-gradient(to bottom, #f5f1e8 0%, #EFE6CE 100%);
+    min-height: 100vh;
+    color: #1a1a1a;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px 100px;
+}
+
+/* Profile Header */
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-image-wrapper {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #788B6A 0%, #46583A 100%);
+    padding: 8px;
+    box-shadow: 0 0 40px rgba(120, 139, 106, 0.4);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+}
+
+.profile-name {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    font-family: 'Georgia', serif;
+}
+
+.profile-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #46583A;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-family: 'Georgia', serif;
+}
+
+.check-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: #788B6A;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Quote Section */
+.quote-section {
+    margin-bottom: 35px;
+}
+
+.quote-box {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.quote-text {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #2d2d2d;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+.quote-mark {
+    font-size: 48px;
+    color: #ED8047;
+    opacity: 0.3;
+    font-family: Georgia, serif;
+    line-height: 0;
+}
+
+.quote-left {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+
+.quote-right {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+/* Menu Options */
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 18px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.menu-item:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.menu-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.icon-biografia {
+    background: linear-gradient(135deg, #EFE6CE 0%, #e8dfc5 100%);
+    color: #46583A;
+}
+
+.icon-asesoria {
+    background: linear-gradient(135deg, #EFE6CE 0%, #e8dfc5 100%);
+    color: #46583A;
+}
+
+.icon-postres {
+    background: linear-gradient(135deg, #EFE6CE 0%, #e8dfc5 100%);
+    color: #46583A;
+}
+
+.icon-runners {
+    background: linear-gradient(135deg, #EFE6CE 0%, #e8dfc5 100%);
+    color: #46583A;
+}
+
+.menu-text {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Georgia', serif;
+}
+
+.menu-arrow {
+    font-size: 28px;
+    color: #9ca3af;
+    font-weight: 300;
+}
+
+/* E-Book Section */
+.ebook-section {
+    margin-bottom: 40px;
+}
+
+.ebook-card {
+    background: linear-gradient(135deg, #46583A 0%, #3a4730 100%);
+    padding: 28px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ebook-content {
+    flex: 1;
+}
+
+.ebook-label {
+    display: block;
+    color: #ED8047;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    font-family: 'Georgia', serif;
+}
+
+.ebook-title {
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+
+.ebook-download {
+    width: 56px;
+    height: 56px;
+    background: #ED8047;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
+.ebook-download svg {
+    stroke: white;
+}
+
+.ebook-download:active {
+    transform: scale(0.95);
+    background: #d67340;
+}
+
+/* Footer Navigation */
+.footer-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 12px 40px;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+.footer-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #6b7280;
+    transition: all 0.3s ease;
+}
+
+.footer-icon:active {
+    transform: scale(0.9);
+    color: #788B6A;
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+.copyright p {
+    font-size: 12px;
+    color: #6b7280;
+    font-family: 'Georgia', serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 15px 100px;
+    }
+
+    .profile-name {
+        font-size: 28px;
+    }
+
+    .quote-text {
+        font-size: 16px;
+    }
+
+    .menu-text {
+        font-size: 16px;
+    }
+
+    .ebook-title {
+        font-size: 22px;
+    }
+
+    .footer-nav {
+        padding: 10px 30px;
+    }
+}
