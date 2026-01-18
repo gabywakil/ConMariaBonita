@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Plan Runner</title>
+    <link rel="stylesheet" href="plan-runner.css">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">Tu plan está listo</h1>
+    <p class="subtitle">
+        Diseñado según tu perfil y objetivo.
+    </p>
+
+    <div class="pdf-container">
+        <iframe id="pdfViewer"></iframe>
+    </div>
+</div>
+
+<script>
+    const sexo = localStorage.getItem('sexoRunner');
+    const pdf = document.getElementById('pdfViewer');
+
+    if (sexo === 'hombre') {
+        pdf.src = 'pdf/plan-runner-hombre.pdf';
+    } else if (sexo === 'mujer') {
+        pdf.src = 'pdf/plan-runner-mujer.pdf';
+    } else {
+        document.body.innerHTML = '<p>Error al cargar el plan</p>';
+    }
+</script>
+
+</body>
+</html>

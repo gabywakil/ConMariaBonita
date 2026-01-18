@@ -496,9 +496,10 @@ body {
 }
 
 .gender-btn.active {
-    background: #ffffff;
-    color: #0f2b14;
-    border-color: #ffffff;
+    background: #788B6A;          /* color principal */
+    color: #ffffff;               /* texto blanco */
+    border-color: #788B6A;
+    box-shadow: 0 4px 12px rgba(120, 139, 106, 0.35);
 }
 
 .gender-btn:active {

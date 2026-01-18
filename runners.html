@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrición Runner - María González</title>
     <link rel="stylesheet" href="runners.css">
+    <script src="script2.js"></script>
+
+
 </head>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('generatePlan');
+
+    btn.addEventListener('click', function () {
+        window.location.href = "planrunner.html";
+    });
+});
+</script>
+
 <body>
     <div class="container">
         <!-- Header -->
@@ -21,7 +35,7 @@
 
         <!-- Hero Banner -->
         <section class="hero-banner">
-            <img src="runner-hero.jpg" alt="Runner" class="hero-image">
+            <img src="assets/tunners.jpg" alt="Runner" class="hero-image">
             <div class="hero-overlay">
                 <h2 class="hero-title">Optimiza tu Carrera</h2>
                 <p class="hero-subtitle">Alimentación para tu mejor marca</p>
@@ -32,25 +46,43 @@
         <section class="calculator-section">
             <h3 class="section-title">Calculadora Nutricional</h3>
             
-            <div class="input-row">
-                <div class="input-group">
-                    <label class="input-label">Edad</label>
-                    <div class="input-field">
-                        <input type="number" placeholder="Ej. 28" class="input">
-                        <span class="input-unit">años</span>
-                    </div>
-                </div>
-                <div class="input-group">
-                    <label class="input-label">Peso</label>
-                    <div class="input-field">
-                        <input type="number" placeholder="Ej. 70" class="input">
-                        <span class="input-unit">kg</span>
-                    </div>
-                </div>
-            </div>
+           <div class="section-intro">
+    <p class="section-quote">
+        Tu meta está a un kilómetro de distancia de tu alimentación.
+    </p>
 
-            <div class="form-group">
-    <label class="form-label">Sexo</label>
+    <p class="section-text">
+        Prepárate para conquistar la meta de abril 
+        Para que tu dieta de preparación sea realmente efectiva, necesitamos conocer algunos datos clave antes de completar el pago.
+    </p>
+
+    <br></br>
+
+    <p class="section-text">
+        Completa el siguiente formulario de inscripción:
+    </p>
+</div>
+
+<div class="input-row">
+    <div class="input-group">
+        <label class="input-label">Edad</label>
+        <div class="input-field">
+            <input type="number" placeholder="Ej. 28" class="input">
+            <span class="input-unit">años</span>
+        </div>
+    </div>
+
+    <div class="input-group">
+        <label class="input-label">Peso Actual</label>
+        <div class="input-field">
+            <input type="number" placeholder="Ej. 70" class="input">
+            <span class="input-unit">kg</span>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="form-label">Sexo Biológico</label>
 
     <div class="gender-buttons">
         <button class="gender-btn active" type="button">
@@ -71,66 +103,72 @@
     </div>
 </div>
 
+<div class="form-group">
+    <label class="form-label">Volumen de Entrenamiento Semanal</label>
 
-            
+    <div class="activity-buttons">
+        <button class="activity-btn ">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L12 6M12 18L12 22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12L6 12M18 12L22 12M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            5–10 km
+        </button>
 
-            <div class="form-group">
-                <label class="form-label">Nivel de Actividad</label>
-                <div class="activity-buttons">
-                    <button class="activity-btn active">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2L12 6M12 18L12 22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12L6 12M18 12L22 12M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        5-10k
-                    </button>
-                    <button class="activity-btn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        10-21k
-                    </button>
-                    <button class="activity-btn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Maratón
-                    </button>
-                </div>
-            </div>
+        <button class="activity-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            10–21 km
+        </button>
 
-            <div class="form-group">
-                <label class="form-label">Objetivo Principal</label>
-                <div class="goal-buttons">
-                    <button class="goal-btn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <span>Energía</span>
-                    </button>
-                    <button class="goal-btn active">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <span>Peso</span>
-                    </button>
-                    <button class="goal-btn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        <span>Recuperar</span>
-                    </button>
-                </div>
-            </div>
+        <button class="activity-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Maratón
+        </button>
+    </div>
+</div>
 
-            <button class="generate-button">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                Generar Plan
-            </button>
+<div class="form-group">
+    <label class="form-label">Objetivo Principal para Abril</label>
+
+    <div class="goal-buttons">
+        <button class="goal-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Más Energía</span>
+        </button>
+
+        <button class="goal-btn ">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Optimizar Peso</span>
+        </button>
+
+        <button class="goal-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Mejor Recuperación</span>
+        </button>
+    </div>
+</div>
+
+
+
+            <button type="button" class="generate-button" id="generatePlan">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"/>
+        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"/>
+        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
+    </svg>
+    Generar Plan
+</button>
+
         </section>
 
         <!-- Today's Plan Section -->
