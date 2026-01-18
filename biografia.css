@@ -191,7 +191,7 @@ body {
 .section-block {
     margin: 0 20px 16px;
     padding: 20px;
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 16px;
     border-left: 4px solid #788B6A;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
@@ -503,4 +503,50 @@ body {
     background: #fff;
     padding: 12px 14px;
     border-radius: 14px;
+}
+
+/* CERTIFICATIONS SECTION */
+.certifications-section {
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.certifications-section .section-text {
+    margin-bottom: 20px;
+}
+
+/* Grid */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+/* Card */
+.certification-card {
+    background: #f9fafb;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.certification-card:active {
+    transform: scale(0.97);
+}
+
+/* Image */
+.certification-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+/* Text */
+.certification-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #4A5D3A;
+    line-height: 1.4;
 }
