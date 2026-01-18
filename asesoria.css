@@ -303,69 +303,59 @@ body {
 
 .testimonials-carousel {
     display: flex;
-    gap: 16px;
+    gap: 14px;
     overflow-x: auto;
-    padding-bottom: 16px;
-    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    padding: 6px 0 10px;
+    -webkit-overflow-scrolling: touch;
 }
 
 .testimonials-carousel::-webkit-scrollbar {
     display: none;
 }
 
-.testimonial-card {
-    min-width: 280px;
-    background: white;
-    padding: 20px;
-    border-radius: 16px;
-    flex-shrink: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-.testimonial-stars {
-    font-size: 16px;
-    margin-bottom: 12px;
-}
-
-.testimonial-text {
-    font-size: 14px;
-    color: #4b5563;
-    line-height: 1.6;
-    margin-bottom: 16px;
-    font-style: italic;
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.author-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    background: linear-gradient(135deg, #788B6A 0%, #46583A 100%);
-}
-
-.author-info {
+.testimonials {
     display: flex;
     flex-direction: column;
+    gap: 16px;
 }
 
-.author-name {
+/* Base card */
+.testimonial-card {
+    background: #ffffff;
+    padding: 16px 18px;
+    border-radius: 22px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+
+    /* 🔑 carrusel */
+    flex-shrink: 0;
+    scroll-snap-align: start;
+
+    /* tamaño mobile */
+    width: 78%;
+    max-width: 320px;
+}
+
+
+/* Asimetría */
+.testimonial-card.left {
+    align-self: flex-start;
+    border-top-left-radius: 8px;
+}
+
+.testimonial-card.right {
+    align-self: flex-end;
+    border-top-right-radius: 8px;
+}
+
+/* Texto */
+.testimonial-text {
+    font-family: Georgia, serif;
     font-size: 14px;
-    font-weight: 700;
-    color: #1a1a1a;
-    font-family: 'Georgia', serif;
+    line-height: 1.55;
+    color: #4A4A4A;
 }
 
-.author-detail {
-    font-size: 11px;
-    color: #9ca3af;
-    letter-spacing: 0.5px;
-}
 
 /* FAQ Button Section */
 .faq-button-section {
@@ -517,5 +507,205 @@ body {
 
     .cta-button {
         font-size: 15px;
+    }
+}
+
+
+/* Location Section */
+.location-section {
+    margin: 0 20px 24px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.map-container {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #788B6A 0%, #46583A 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.location-text {
+    flex: 1;
+}
+
+.location-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    font-family: 'Georgia', serif;
+}
+
+.location-address {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.location-button {
+    width: 40px;
+    height: 40px;
+    background: #f3f4f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #46583A;
+    transition: all 0.3s ease;
+}
+
+.location-button:active {
+    background: #e5e7eb;
+    transform: scale(0.95);
+}
+
+/* ==============================
+   RECIPES / INSTAGRAM SECTION
+   ============================== */
+
+.recipes-section {
+    margin-top: 60px;
+    padding: 0 20px 40px;
+}
+
+.recipes-section .section-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.recipes-section .section-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #2f2f2f;
+}
+
+.recipes-section .section-subtitle {
+    font-size: 0.95rem;
+    color: #8a8a8a;
+    margin-top: 6px;
+}
+
+/* ==============================
+   RECIPES CAROUSEL
+   ============================== */
+
+.recipes-carousel {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 12px;
+}
+
+.recipes-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* ==============================
+   RECIPE CARD
+   ============================== */
+
+.recipe-card {
+    flex: 0 0 75%;
+    max-width: 75%;
+    background: #ffffff;
+    border-radius: 22px;
+    overflow: hidden;
+    scroll-snap-align: center;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ==============================
+   IMAGE
+   ============================== */
+
+.recipe-image {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==============================
+   CONTENT
+   ============================== */
+
+.recipe-content {
+    padding: 16px 18px 20px;
+}
+
+.recipe-quote {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6b8e6e; /* verde suave */
+    margin-bottom: 8px;
+}
+
+.recipe-caption {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* ==============================
+   INSTAGRAM CTA
+   ============================== */
+
+.instagram-cta {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.instagram-button {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #6b8e6e, #8fb996);
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(107, 142, 110, 0.3);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.instagram-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(107, 142, 110, 0.35);
+}
+
+/* ==============================
+   DESKTOP ADJUSTMENTS
+   ============================== */
+
+@media (min-width: 768px) {
+    .recipe-card {
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+
+    .recipe-image {
+        height: 240px;
     }
 }

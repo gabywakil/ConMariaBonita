@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Georgia', 'Times New Roman', serif;
-    background: linear-gradient(to bottom, #f5f1e8 0%, #EFE6CE 100%);
+    background: #EFE6CE;
     color: #1a1a1a;
     min-height: 100vh;
 }
@@ -27,7 +27,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: linear-gradient(to bottom, #f5f1e8 0%, #EFE6CE 100%);
+    background: #EFE6CE;
 }
 
 .back-button {
@@ -80,7 +80,7 @@ body {
 }
 
 .featured-card {
-    background: linear-gradient(135deg, #EFE6CE 0%, #e8dfc5 100%);
+    background: linear-gradient(to bottom, #f5f1e8 0%, #EFE6CE 100%);
     border-radius: 32px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
