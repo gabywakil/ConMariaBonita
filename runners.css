@@ -1,0 +1,506 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: linear-gradient(to bottom, #f5f1e8 0%, #EFE6CE 100%);
+    color: #1a1a1a;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(to bottom, #f5f1e8 0%, #EFE6CE 100%);
+}
+
+.back-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #1a1a1a;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Georgia', serif;
+}
+
+.spacer {
+    width: 40px;
+}
+
+/* Hero Banner */
+.hero-banner {
+    position: relative;
+    height: 180px;
+    margin: 0 20px 30px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+}
+
+.hero-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+    font-family: 'Georgia', serif;
+}
+
+.hero-subtitle {
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+}
+
+/* Calculator Section */
+.calculator-section {
+    padding: 0 20px 30px;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a;
+    font-family: 'Georgia', serif;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #1a1a1a;
+    background: transparent;
+    font-family: 'Georgia', serif;
+}
+
+.input::placeholder {
+    color: #9ca3af;
+}
+
+.input-unit {
+    font-size: 13px;
+    color: #6b7280;
+    margin-left: 8px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    display: block;
+    font-family: 'Georgia', serif;
+}
+
+.activity-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.activity-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: white;
+    border: 2px solid #e5e7eb;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+}
+
+.activity-btn svg {
+    stroke: #6b7280;
+}
+
+.activity-btn.active {
+    background: #788B6A;
+    border-color: #788B6A;
+    color: white;
+}
+
+.activity-btn.active svg {
+    stroke: white;
+}
+
+.activity-btn:active {
+    transform: scale(0.98);
+}
+
+.goal-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.goal-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 2px solid #e5e7eb;
+    padding: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.goal-btn svg {
+    stroke: #6b7280;
+}
+
+.goal-btn span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-family: 'Georgia', serif;
+}
+
+.goal-btn.active {
+    background: #e8f5e9;
+    border-color: #788B6A;
+}
+
+.goal-btn.active svg {
+    stroke: #788B6A;
+}
+
+.goal-btn:active {
+    transform: scale(0.98);
+}
+
+.generate-button {
+    width: 100%;
+    background: #788B6A;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(120, 139, 106, 0.3);
+}
+
+.generate-button svg {
+    stroke: white;
+}
+
+.generate-button:active {
+    transform: scale(0.98);
+    background: #6a7d5e;
+}
+
+/* Plan Section */
+.plan-section {
+    padding: 0 20px 30px;
+}
+
+.plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calories-badge {
+    background: #788B6A;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Georgia', serif;
+}
+
+.meals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.meal-card {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.meal-card:active {
+    transform: scale(0.99);
+}
+
+.meal-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.meal-icon.orange {
+    background: #FFF4E6;
+}
+
+.meal-icon.orange svg {
+    stroke: #ED8047;
+}
+
+.meal-icon.green {
+    background: #E8F5E9;
+}
+
+.meal-icon.green svg {
+    stroke: #788B6A;
+}
+
+.meal-icon.blue {
+    background: #E3F2FD;
+}
+
+.meal-icon.blue svg {
+    stroke: #2196F3;
+}
+
+.meal-content {
+    flex: 1;
+}
+
+.meal-type {
+    font-size: 11px;
+    color: #9ca3af;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.meal-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+    font-family: 'Georgia', serif;
+}
+
+.meal-description {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* Tips Section */
+.tips-section {
+    padding: 0 20px 30px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.tip-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
+
+.tip-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tip-icon.blue {
+    background: #E3F2FD;
+}
+
+.tip-icon.blue svg {
+    stroke: #2196F3;
+}
+
+.tip-icon.yellow {
+    background: #FFF9E6;
+}
+
+.tip-icon.yellow svg {
+    stroke: #FFC107;
+}
+
+.tip-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    font-family: 'Georgia', serif;
+}
+
+.tip-description {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.bottom-spacing {
+    height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 22px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-buttons {
+        flex-direction: column;
+    }
+
+    .activity-btn {
+        width: 100%;
+    }
+}
+
+/* =========================
+   SEXO (GÉNERO)
+========================= */
+
+.gender-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.gender-btn {
+    height: 48px;
+    border-radius: 14px;
+    border: 1.5px solid #e5e5e5;
+    background: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.gender-btn svg {
+    stroke: currentColor;
+}
+
+.gender-btn.active {
+    background: #ffffff;
+    color: #0f2b14;
+    border-color: #ffffff;
+}
+
+.gender-btn:active {
+    transform: scale(0.97);
+}

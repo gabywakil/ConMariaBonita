@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrición Runner - María González</title>
+    <link rel="stylesheet" href="runners.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <a href="index.html" class="back-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <h1 class="header-title">Nutrición Runner</h1>
+            <div class="spacer"></div>
+        </header>
+
+        <!-- Hero Banner -->
+        <section class="hero-banner">
+            <img src="runner-hero.jpg" alt="Runner" class="hero-image">
+            <div class="hero-overlay">
+                <h2 class="hero-title">Optimiza tu Carrera</h2>
+                <p class="hero-subtitle">Alimentación para tu mejor marca</p>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section class="calculator-section">
+            <h3 class="section-title">Calculadora Nutricional</h3>
+            
+            <div class="input-row">
+                <div class="input-group">
+                    <label class="input-label">Edad</label>
+                    <div class="input-field">
+                        <input type="number" placeholder="Ej. 28" class="input">
+                        <span class="input-unit">años</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Peso</label>
+                    <div class="input-field">
+                        <input type="number" placeholder="Ej. 70" class="input">
+                        <span class="input-unit">kg</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+    <label class="form-label">Sexo</label>
+
+    <div class="gender-buttons">
+        <button class="gender-btn active" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 12V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Hombre
+        </button>
+
+        <button class="gender-btn" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="6" r="4" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 10V22M8 18H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Mujer
+        </button>
+    </div>
+</div>
+
+
+            
+
+            <div class="form-group">
+                <label class="form-label">Nivel de Actividad</label>
+                <div class="activity-buttons">
+                    <button class="activity-btn active">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L12 6M12 18L12 22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12L6 12M18 12L22 12M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        5-10k
+                    </button>
+                    <button class="activity-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        10-21k
+                    </button>
+                    <button class="activity-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Maratón
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Objetivo Principal</label>
+                <div class="goal-buttons">
+                    <button class="goal-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Energía</span>
+                    </button>
+                    <button class="goal-btn active">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Peso</span>
+                    </button>
+                    <button class="goal-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>Recuperar</span>
+                    </button>
+                </div>
+            </div>
+
+            <button class="generate-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Generar Plan
+            </button>
+        </section>
+
+        <!-- Today's Plan Section -->
+        <section class="plan-section">
+            <div class="plan-header">
+                <h3 class="section-title">Tu Plan de Hoy</h3>
+                <span class="calories-badge">2,400 kcal</span>
+            </div>
+
+            <div class="meals-list">
+                <!-- Meal 1 -->
+                <div class="meal-card">
+                    <div class="meal-icon orange">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="meal-content">
+                        <span class="meal-type">PRE-ENTRENO (30M ANTES)</span>
+                        <h4 class="meal-name">Banana + Avena</h4>
+                        <p class="meal-description">Carbohidratos de rápida absorción para energía inmediata.</p>
+                    </div>
+                </div>
+
+                <!-- Meal 2 -->
+                <div class="meal-card">
+                    <div class="meal-icon green">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M4.5 16.5C3 14.89 2 12.5 2 10C2 5.5 5.5 2 10 2C12.5 2 14.89 3 16.5 4.5L18 6L13 11L17 15L11.5 20.5C9.89 22 7.5 23 5 23C0.5 23 -3 19.5 -3 15C-3 12.5 -2 10.11 -0.5 8.5L4.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="meal-content">
+                        <span class="meal-type">RECUPERACIÓN</span>
+                        <h4 class="meal-name">Batido Proteico + Frutos Rojos</h4>
+                        <p class="meal-description">Repara fibras musculares y repone glucógeno.</p>
+                    </div>
+                </div>
+
+                <!-- Meal 3 -->
+                <div class="meal-card">
+                    <div class="meal-icon blue">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 11L8 6M8 6L13 11M8 6V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 11L16 6M16 6L11 11M16 6V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="meal-content">
+                        <span class="meal-type">CENA LIGERA</span>
+                        <h4 class="meal-name">Salmón con Quinoa</h4>
+                        <p class="meal-description">Grasas saludables Omega-3 antiinflamatorias.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="tips-section">
+            <h3 class="section-title">Tips Pro Runners</h3>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon blue">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2.69L12 21.31" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M17 8C17 10.76 14.76 13 12 13C9.24 13 7 10.76 7 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4 class="tip-title">Hidratación</h4>
+                    <p class="tip-description">Bebe 500ml de agua 2 horas antes de salir a correr para evitar la fatiga temprana.</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon yellow">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h4 class="tip-title">Energía</h4>
+                    <p class="tip-description">Evita comida pesada 3 horas antes. Prefiere snacks más digestivos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Spacing -->
+        <div class="bottom-spacing"></div>
+    </div>
+</body>
+</html>

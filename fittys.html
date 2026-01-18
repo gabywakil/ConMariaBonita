@@ -3,114 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fittys</title>
+    <title>Postres Saludables - María González</title>
     <link rel="stylesheet" href="fittys.css">
 </head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <a href="index.html" class="back-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <h1 class="header-title">Postres Saludables</h1>
+            <div class="spacer"></div>
+        </header>
 
-<body class="fittys">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h2 class="hero-title">Tu dosis de <span class="highlight">energía real</span></h2>
+            <p class="hero-description">Galletas saludables creadas por nutricionistas. Sin culpas, solo sabor.</p>
+        </section>
 
-<header class="fittys-header">
-    <span class="icon">☰</span>
-    <h1>FITTYS</h1>
-    <span class="icon">🛒</span>
-</header>
+        <!-- Featured Card -->
+        <section class="featured-section">
+            <div class="featured-card">
+                <div class="featured-images">
+                    <img src="cookie1.jpg" alt="Postre 1" class="featured-img">
+                    <img src="cookie2.jpg" alt="Postre 2" class="featured-img">
+                </div>
+                <div class="featured-content">
+                    <h3 class="featured-title">DÚO DINÁMICO</h3>
+                    <p class="featured-subtitle">SUGAR FREE & HIGH PROTEIN</p>
+                    <button class="featured-button">VER COLECCIÓN</button>
+                </div>
+            </div>
+        </section>
 
-<main class="fittys-container">
-
-    <!-- HERO -->
-    <section class="fittys-hero">
-        <h2>
-            Tu dosis de<br>
-            <span>energía real</span>
-        </h2>
-        <p>
-            Galletas saludables creadas por nutricionistas.
-            Sin culpas, solo sabor.
-        </p>
-
-        <div class="fittys-featured">
-            <div class="fittys-images">
-                <img src="hero1.jpg" class="img-left" alt="">
-                <img src="hero2.jpg" class="img-right" alt="">
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="section-header">
+                <h3 class="section-title">NUESTRAS COOKIES</h3>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="leaf-icon">
+                    <path d="M12 2C12 2 8 6 8 10C8 12.2091 9.79086 14 12 14C14.2091 14 16 12.2091 16 10C16 6 12 2 12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 14V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </div>
 
-            <div class="fittys-featured-info">
-                <h3>DÚO DINÁMICO</h3>
-                <small>SUGAR FREE & HIGH PROTEIN</small>
-                <button>VER COLECCIÓN</button>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-badge sugar-free">SUGAR FREE</div>
+                    <div class="product-image-container">
+                        <img src="cookie-cream.jpg" alt="Cookies & Cream" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-protein">HIGH PROTEIN</span>
+                        <h4 class="product-name">COOKIES & CREAM</h4>
+                        <p class="product-price">$4.50</p>
+                        <button class="add-button">
+                            <span>+</span> AÑADIR
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-badge carb-free">0 CARB FREE</div>
+                    <div class="product-image-container">
+                        <img src="cookie-choco.jpg" alt="Chispas de Choco" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-protein">HIGH PROTEIN</span>
+                        <h4 class="product-name">CHISPAS DE CHOCO</h4>
+                        <p class="product-price">$4.50</p>
+                        <button class="add-button orange">
+                            <span>+</span> AÑADIR
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- COOKIES -->
-    <section class="fittys-products">
-        <h3>NUESTRAS COOKIES</h3>
-
-        <div class="fittys-grid">
-
-            <article class="fittys-card">
-                <span class="badge green">SUGAR FREE</span>
-                <span class="badge gray">HIGH PROTEIN</span>
-                <img src="cookie1.jpg" alt="">
-                <h4>COOKIES & CREAM</h4>
-                <span class="price green">$4.50</span>
-                <button class="btn green">+ AÑADIR</button>
-            </article>
-
-            <article class="fittys-card">
-                <span class="badge orange">SUGAR FREE</span>
-                <span class="badge gray">HIGH PROTEIN</span>
-                <img src="cookie2.jpg" alt="">
-                <h4>CHISPAS DE CHOCO</h4>
-                <span class="price orange">$4.50</span>
-                <button class="btn orange">+ AÑADIR</button>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- STORES -->
-    <section class="fittys-stores">
-        <h3>PUNTOS DE VENTA</h3>
-
-        <div class="store">
-            <div>
-                <strong>HEALTH HUB STUDIO</strong>
-                <p>Av. Santa Cruz 450, Miraflores</p>
+        <!-- Locations Section -->
+        <section class="locations-section">
+            <div class="section-header">
+                <h3 class="section-title">PUNTOS DE VENTA</h3>
+                <button class="location-icon-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
             </div>
-            <span class="map green">📍</span>
-        </div>
 
-        <div class="store">
-            <div>
-                <strong>THE ORGANIC MARKET</strong>
-                <p>Calle El Pino 123, San Isidro</p>
+            <div class="locations-list">
+                <div class="location-card">
+                    <div class="location-info">
+                        <h4 class="location-name">HEALTH HUB STUDIO</h4>
+                        <p class="location-address">Av. Santa Cruz 450, Miraflores</p>
+                    </div>
+                    <div class="location-badge green">1</div>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-info">
+                        <h4 class="location-name">THE ORGANIC MARKET</h4>
+                        <p class="location-address">Calle El Pino 123, San Isidro</p>
+                    </div>
+                    <div class="location-badge orange">1</div>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-info">
+                        <h4 class="location-name">NUTRI-FIT CENTER</h4>
+                        <p class="location-address">Centro Comercial Real, Piso 2</p>
+                    </div>
+                    <div class="location-badge green">1</div>
+                </div>
             </div>
-            <span class="map orange">📍</span>
-        </div>
+        </section>
 
-        <div class="store">
-            <div>
-                <strong>NUTRI-FIT CENTER</strong>
-                <p>Centro Comercial Real, Piso 2</p>
-            </div>
-            <span class="map green">📍</span>
-        </div>
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <p class="cta-question">¿QUIERES SER DISTRIBUIDOR?</p>
+            <a href="#" class="cta-link">CONTÁCTANOS AQUÍ</a>
+        </section>
 
-        <p class="distributor">
-            ¿QUIERES SER DISTRIBUIDOR?<br>
-            <a href="#">CONTÁCTANOS AQUÍ</a>
-        </p>
-    </section>
 
-</main>
-
-<footer class="fittys-nav">
-    <span class="active">🏠<small>HOME</small></span>
-    <span>🔍<small>EXPLORAR</small></span>
-    <span>♡<small>FAVORITOS</small></span>
-    <span>👤<small>PERFIL</small></span>
-</footer>
-
+    </div>
 </body>
 </html>

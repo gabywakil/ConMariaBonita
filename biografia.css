@@ -29,6 +29,12 @@ body {
     z-index: 100;
 }
 
+.header-title {
+    flex: 1;
+    text-align: center;
+}
+
+
 .back-button,
 .email-button {
     width: 40px;
@@ -264,6 +270,29 @@ body {
     font-family: 'Georgia', serif;
 }
 
+.value-card {
+    text-align: center;
+    padding: 16px;
+}
+
+.value-name {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    color: #3A3A3A;
+}
+
+.value-description {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #6B6B6B;
+    margin-top: 6px;
+    padding: 0 6px;
+}
+
+
 /* Location Section */
 .location-section {
     margin: 0 20px 24px;
@@ -396,3 +425,97 @@ body {
         padding: 16px 28px;
     }
 }
+
+/* =========================
+   LEER MÁS
+========================= */
+
+.section-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+    transition: max-height 0.3s ease;
+}
+
+.section-text.collapsed {
+    max-height: 110px;
+    overflow: hidden;
+    position: relative;
+}
+
+.read-more {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #46583A;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.arrow-down {
+    transition: transform 0.3s ease;
+}
+
+.read-more.active .arrow-down {
+    transform: rotate(180deg);
+}
+
+/* =========================
+   LEER MÁS
+========================= */
+
+.text-wrapper {
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.text-wrapper.collapsed {
+    max-height: 170px;
+}
+
+.text-wrapper.expanded {
+    max-height: 1000px;
+}
+
+.read-more {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #4A5D3A;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.read-more.active .arrow {
+    transform: rotate(180deg);
+}
+
+.section-quote {
+    font-style: italic;
+    font-size: 14px;
+    margin: 14px 0 6px;
+    color: #4A5D3A;
+}
+
+.highlight-quote {
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.section-text.collapsed {
+    max-height: 120px;
+    overflow: hidden;
+}
+
+
