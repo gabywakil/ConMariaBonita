@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log('Verificación - Guardado en localStorage:', verificar);
 
             // Redirigir a la página del plan
-            window.location.href = 'plan-runner.html';
+            window.location.href = 'planrunner.html';
         });
     }
 });
