@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // Variable global para almacenar el sexo
+    let sexoSeleccionado = null;
+
     function singleSelect(containerClass, buttonClass) {
         const containers = document.querySelectorAll(containerClass);
 
@@ -24,43 +27,46 @@ document.addEventListener("DOMContentLoaded", () => {
     // Objetivo principal
     singleSelect(".goal-buttons", ".goal-btn");
 
-});
+    // =============================
+    // CAPTURAR SEXO SELECCIONADO
+    // =============================
+    const genderButtons = document.querySelectorAll('.gender-btn');
+    
+    genderButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            genderButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
 
-/* ======================
-   SEXO (FORMULARIO)
-====================== */
-const genderButtons = document.querySelectorAll('.gender-btn');
-let sexoSeleccionado = null;
-
-genderButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        genderButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        sexoSeleccionado = btn.textContent.trim().toLowerCase();
+            // Capturar el texto del botón y limpiar
+            sexoSeleccionado = btn.textContent.trim().toLowerCase();
+            console.log('Sexo seleccionado:', sexoSeleccionado);
+        });
     });
-});
 
-/* ======================
-   GENERAR PLAN
-====================== */
-const generateBtn = document.querySelector('.generate-button');
+    // =============================
+    // BOTÓN GENERAR PLAN
+    // =============================
+    const generateBtn = document.getElementById('generatePlan');
 
-generateBtn.addEventListener('click', () => {
-    if (!sexoSeleccionado) {
-        alert('Por favor selecciona Hombre o Mujer');
-        return;
+    if (generateBtn) {
+        generateBtn.addEventListener('click', () => {
+            // Verificar si se seleccionó un sexo
+            if (!sexoSeleccionado) {
+                alert('Por favor selecciona Hombre o Mujer antes de continuar');
+                return;
+            }
+
+            console.log('Guardando en localStorage:', sexoSeleccionado);
+            
+            // Guardar en localStorage
+            localStorage.setItem('sexoRunner', sexoSeleccionado);
+            
+            // Verificar que se guardó correctamente
+            const verificar = localStorage.getItem('sexoRunner');
+            console.log('Verificación - Guardado en localStorage:', verificar);
+
+            // Redirigir a la página del plan
+            window.location.href = 'plan-runner.html';
+        });
     }
-
-    // Guardamos el sexo seleccionado del formulario
-    localStorage.setItem('sexoRunner', sexoSeleccionado);
-
-    // Redirige
-    window.location.href = 'plan-runner.html';
 });
-
-
-document.getElementById('generatePlan').addEventListener('click', function () {
-    window.location.href = 'plan-runner.html';
-});
-

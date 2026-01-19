@@ -93,6 +93,45 @@ body {
     padding: 0 20px 30px;
 }
 
+/* =========================
+   INTRO TEXTO FORMULARIO
+========================= */
+
+.section-intro {
+    margin-bottom: 32px;
+    padding-left: 4px;
+}
+
+.section-quote {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #1a1a1a;
+    font-family: 'Georgia', serif;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+/* Línea decorativa */
+.section-quote::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 3px;
+    background: #788B6A;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+.section-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4b5563;
+    max-width: 95%;
+    margin-bottom: 10px;
+}
+
+
 .section-title {
     font-size: 22px;
     font-weight: 700;
@@ -397,6 +436,10 @@ body {
     text-align: center;
 }
 
+/* =========================
+   TIP ICON COLORS
+========================= */
+
 .tip-icon {
     width: 64px;
     height: 64px;
@@ -407,6 +450,7 @@ body {
     justify-content: center;
 }
 
+/* Azul */
 .tip-icon.blue {
     background: #E3F2FD;
 }
@@ -415,6 +459,7 @@ body {
     stroke: #2196F3;
 }
 
+/* Amarillo */
 .tip-icon.yellow {
     background: #FFF9E6;
 }
@@ -422,6 +467,43 @@ body {
 .tip-icon.yellow svg {
     stroke: #FFC107;
 }
+
+/* Verde */
+.tip-icon.green {
+    background: #E8F5E9;
+}
+
+.tip-icon.green svg {
+    stroke: #4CAF50;
+}
+
+/* Morado */
+.tip-icon.purple {
+    background: #F3E8FF;
+}
+
+.tip-icon.purple svg {
+    stroke: #8B5CF6;
+}
+
+/* Naranja */
+.tip-icon.orange {
+    background: #FFF4E6;
+}
+
+.tip-icon.orange svg {
+    stroke: #ED8047;
+}
+
+/* Rojo */
+.tip-icon.red {
+    background: #FEE2E2;
+}
+
+.tip-icon.red svg {
+    stroke: #EF4444;
+}
+
 
 .tip-title {
     font-size: 16px;
@@ -505,3 +587,84 @@ body {
 .gender-btn:active {
     transform: scale(0.97);
 }
+
+/* =========================
+   ESTRATEGIA NUTRICIONAL
+========================= */
+
+.strategy-section {
+    padding: 0 20px 30px;
+}
+
+.strategy-intro {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.strategy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.strategy-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 16px;
+    display: flex;
+    gap: 14px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    transition: all 0.25s ease;
+}
+
+.strategy-card:active {
+    transform: scale(0.99);
+}
+
+.strategy-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.strategy-icon.orange {
+    background: #FFF4E6;
+}
+
+.strategy-icon.green {
+    background: #E8F5E9;
+}
+
+.strategy-icon.blue {
+    background: #E3F2FD;
+}
+
+.strategy-content h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+    font-family: 'Georgia', serif;
+}
+
+.strategy-content p {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.strategy-note {
+    margin-top: 22px;
+    font-size: 13px;
+    text-align: center;
+    color: #788B6A;
+    font-weight: 600;
+}
+
