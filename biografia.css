@@ -329,6 +329,16 @@ body {
     -webkit-line-clamp: unset !important;
 }
 
+@media (max-width: 768px) {
+    .section-text {
+        max-height: none !important;
+        overflow: visible !important;
+        -webkit-line-clamp: unset !important;
+        display: block !important;
+    }
+}
+
+
 
 /* Location Section */
 .location-section {
