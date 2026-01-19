@@ -329,6 +329,13 @@ body {
     -webkit-line-clamp: unset !important;
 }
 
+/* SOLO para el texto de "Mis Valores" */
+.section-block .section-text.collapsed {
+    max-height: none !important;
+    overflow: visible !important;
+    -webkit-line-clamp: unset !important;
+    display: block !important;
+}
 
 
 
