@@ -114,17 +114,7 @@
                         <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
                     </svg>
                 </a>
-                <a href="#" class="social-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-                <a href="#" class="social-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M17 2H7C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2Z" stroke="currentColor" stroke-width="2"/>
-                        <path d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61992 14.1902 8.22773 13.4229 8.09407 12.5922C7.9604 11.7615 8.09207 10.9099 8.47033 10.1584C8.84859 9.40685 9.45419 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87658 12.63 8C13.4789 8.12588 14.2649 8.52146 14.8717 9.12831C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </a>
+                
             </div>
         </section>
 
@@ -150,5 +140,51 @@
         <!-- Bottom Spacing -->
         <div class="bottom-spacing"></div>
     </div>
+
+    <!-- Contact Methods -->
+<section class="contact-methods">
+    <!-- Llamar -->
+    <a href="tel:+584141944115" class="contact-card">
+        <div class="contact-icon green">
+            <!-- ícono de teléfono -->
+        </div>
+        <span class="contact-label">Llamar</span>
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:contacto@marialogonzalez.com" class="contact-card">
+        <div class="contact-icon green">
+            <!-- ícono de email -->
+        </div>
+        <span class="contact-label">Email</span>
+    </a>
+</section>
+
+<!-- Contact Form -->
+<form class="contact-form" onsubmit="enviarWhatsApp(event)">
+    <!-- campos de nombre, correo, motivo, mensaje -->
+    <button type="submit" class="submit-button">
+        Enviar Consulta
+        <!-- ícono de enviar -->
+    </button>
+</form>
+
+<script>
+function enviarWhatsApp(e) {
+    e.preventDefault(); // evita envío normal del formulario
+
+    const nombre = document.querySelector('.contact-form input[type="text"]').value;
+    const email = document.querySelector('.contact-form input[type="email"]').value;
+    const motivo = document.querySelector('.contact-form select').value;
+    const mensaje = document.querySelector('.contact-form textarea').value;
+
+    const texto = `Hola, soy ${nombre} (${email}). Motivo: ${motivo}. Mensaje: ${mensaje}`;
+    const numero = "584141944115"; // tu número de WhatsApp con código país sin + ni 0
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, "_blank");
+}
+</script>
+
 </body>
 </html>
