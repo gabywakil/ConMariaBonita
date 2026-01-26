@@ -6,6 +6,18 @@
     <title>Lic. María Mardeni - Nutrición</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
+<div class="modal-overlay" id="comingSoonModal">
+    <div class="modal-box">
+        <h3>✨ Próximamente ✨</h3>
+        <p>
+            Algo bonito está tomando forma 💚<br>
+            Muy pronto lo descubrirás aquí.
+        </p>
+        <button class="modal-close">Entendido</button>
+    </div>
+</div>
+
 <body>
     <div class="container">
         <!-- Header con foto de perfil -->
@@ -53,7 +65,21 @@
                 <span class="menu-arrow">›</span>
             </a>
 
-            <a href="fittys.html" class="menu-item">
+            <div class="menu-item menu-item-disabled" id="comingSoonBtn">
+    <div class="menu-icon icon-postres">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2C12 2 8 6 8 10C8 12.2091 9.79086 14 12 14C14.2091 14 16 12.2091 16 10C16 6 12 2 12 2Z"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 14V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M8 18H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </div>
+
+    <span class="menu-text">Próximamente</span>
+    <span class="menu-badge">Muy pronto</span>
+</div>
+
+           <!--  <a href="fittys.html" class="menu-item">
                 <div class="menu-icon icon-postres">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M12 2C12 2 8 6 8 10C8 12.2091 9.79086 14 12 14C14.2091 14 16 12.2091 16 10C16 6 12 2 12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -63,7 +89,7 @@
                 </div>
                 <span class="menu-text">FITTYS</span>
                 <span class="menu-arrow">›</span>
-            </a>
+            </a>-->
 
             <a href="runners.html" class="menu-item">
                 <div class="menu-icon icon-runners">
@@ -112,5 +138,27 @@
             <p>© 2026 Lic. María Mardeni. By Gabriella Wakil.</p>
         </div>
     </div>
+
+
+    <script>
+    const comingSoonBtn = document.getElementById('comingSoonBtn');
+    const comingSoonModal = document.getElementById('comingSoonModal');
+    const closeModalBtn = document.querySelector('.modal-close');
+
+    comingSoonBtn.addEventListener('click', () => {
+        comingSoonModal.classList.add('active');
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+        comingSoonModal.classList.remove('active');
+    });
+
+    comingSoonModal.addEventListener('click', (e) => {
+        if (e.target === comingSoonModal) {
+            comingSoonModal.classList.remove('active');
+        }
+    });
+</script>
+
 </body>
 </html>

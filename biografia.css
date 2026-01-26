@@ -314,23 +314,6 @@ body {
     font-family: 'Georgia', serif;
 }
 
-.value-description {
-    display: block;
-    overflow: visible;
-    white-space: normal;
-    word-break: break-word;
-    line-height: 1.5;
-    font-size: 14px;
-    margin-top: 6px;
-}
-
-.value-card p {
-    max-height: none !important;
-    -webkit-line-clamp: unset !important;
-}
-
-
-
 
 /* Location Section */
 .location-section {
