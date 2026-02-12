@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Plan Runner - María González</title>
+    <title>Tu Plan Runner - María Bonita</title>
     <link rel="stylesheet" href="planrunner.css">
 </head>
 <body>
@@ -230,24 +230,42 @@
         });
         
         // =============================
-        // WHATSAPP REDIRECT
-        // =============================
-        payButton.addEventListener('click', function() {
-            // Número de WhatsApp (reemplaza con tu número)
-            const phoneNumber = '584141944115'; // Formato: código de país + número sin espacios ni símbolos
-            
-            // Mensaje personalizado según el plan
-            const mensaje = `Hola! Estoy interesado/a en el Plan Runner para ${planType}. Me gustaría completar el pago para acceder al plan completo. ¿Podrían ayudarme?`;
-            
-            // Codificar el mensaje para URL
-            const mensajeCodificado = encodeURIComponent(mensaje);
-            
-            // Crear URL de WhatsApp
-            const whatsappURL = `https://wa.me/${phoneNumber}?text=${mensajeCodificado}`;
-            
-            // Abrir WhatsApp en nueva pestaña
-            window.open(whatsappURL, '_blank');
-        });
+// WHATSAPP REDIRECT
+// =============================
+payButton.addEventListener('click', function() {
+
+const phoneNumber = '584141944115';
+
+// Obtener datos guardados
+const nombre = localStorage.getItem('nombreRunner') || 'No especificado';
+const edad = localStorage.getItem('edadRunner') || 'No especificada';
+const peso = localStorage.getItem('pesoRunner') || 'No especificado';
+const estatura = localStorage.getItem('estaturaRunner') || 'No especificada';
+const objetivo = localStorage.getItem('objetivoRunner') || 'No especificado';
+const sexo = localStorage.getItem('sexoRunner') || 'No especificado';
+
+// Mensaje profesional y estructurado
+const mensaje = 
+`Hola María 👋
+
+Quiero completar el pago de mi Plan Runner (${planType}).
+
+📋 Mis datos:
+• Nombre: ${nombre}
+• Sexo: ${sexo}
+• Edad: ${edad}
+• Peso: ${peso}
+• Estatura: ${estatura}
+• Objetivo: ${objetivo}
+
+Estoy listo/a para desbloquear mi plan completo 💪`;
+
+const mensajeCodificado = encodeURIComponent(mensaje);
+const whatsappURL = `https://wa.me/584141944115?text=${mensajeCodificado}`;
+
+window.open(whatsappURL, '_blank');
+});
+
     </script>
 </body>
 </html>
