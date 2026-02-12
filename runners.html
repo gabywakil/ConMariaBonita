@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="input-group">
         <label class="input-label">Edad</label>
         <div class="input-field">
-            <input type="number" placeholder="Ej. 28" class="input">
+            <input id="edadRunner" type="number" placeholder="Ej. 28" class="input">
             <span class="input-unit">años</span>
         </div>
     </div>
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="input-group">
         <label class="input-label">Peso Actual</label>
         <div class="input-field">
-            <input type="number" placeholder="Ej. 70" class="input">
+            <input id="pesoRunner" type="number" placeholder="Ej. 70" class="input">
             <span class="input-unit">kg</span>
         </div>
     </div>
@@ -378,5 +378,73 @@ document.addEventListener('DOMContentLoaded', function () {
         <!-- Bottom Spacing -->
         <div class="bottom-spacing"></div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        
+          // =========================
+          // GUARDAR INPUTS (EDAD/PESO)
+          // =========================
+          const edadInput = document.getElementById('edadRunner');
+          const pesoInput = document.getElementById('pesoRunner');
+        
+          if (edadInput) {
+            edadInput.addEventListener('input', () => {
+              localStorage.setItem('edadRunner', edadInput.value.trim());
+            });
+          }
+        
+          if (pesoInput) {
+            pesoInput.addEventListener('input', () => {
+              localStorage.setItem('pesoRunner', pesoInput.value.trim());
+            });
+          }
+        
+          // =========================
+          // GUARDAR SEXO
+          // =========================
+          const genderBtns = document.querySelectorAll('.gender-btn');
+          genderBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+              const value = btn.textContent.trim().toLowerCase(); // "hombre" o "mujer"
+              localStorage.setItem('sexoRunner', value);
+            });
+          });
+        
+          // =========================
+          // GUARDAR VOLUMEN
+          // =========================
+          const activityBtns = document.querySelectorAll('.activity-btn');
+          activityBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+              const value = btn.textContent.trim(); // "5–10 km", "10–21 km", "Maratón"
+              localStorage.setItem('volumenRunner', value);
+            });
+          });
+        
+          // =========================
+          // GUARDAR OBJETIVO
+          // =========================
+          const goalBtns = document.querySelectorAll('.goal-btn');
+          goalBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+              const value = btn.textContent.trim(); // "Más Energía", etc.
+              localStorage.setItem('objetivoRunner', value);
+            });
+          });
+        
+          // =========================
+          // BOTÓN GENERAR PLAN (TU MISMO)
+          // =========================
+          const btn = document.getElementById('generatePlan');
+          if (btn) {
+            btn.addEventListener('click', function () {
+              window.location.href = "planrunner.html";
+            });
+          }
+        
+        });
+        </script>
+        
 </body>
 </html>

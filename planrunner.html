@@ -229,38 +229,39 @@
             }
         });
         
-        // =============================
-// WHATSAPP REDIRECT
 // =============================
-payButton.addEventListener('click', function() {
+  // WHATSAPP REDIRECT (MOSTRAR TODOS LOS DATOS)
+  // =============================
+  payButton.addEventListener("click", function () {
+  const phoneNumber = "584141944115";
 
-const phoneNumber = "584141944115";
+  const nombre = (localStorage.getItem("nombreRunner") || "").trim();
+  const sexo = (localStorage.getItem("sexoRunner") || "").trim();
+  const edad = (localStorage.getItem("edadRunner") || "").trim();
+  const peso = (localStorage.getItem("pesoRunner") || "").trim();
+  const estatura = (localStorage.getItem("estaturaRunner") || "").trim();
+  const volumen = (localStorage.getItem("volumenRunner") || "").trim();
+  const objetivo = (localStorage.getItem("objetivoRunner") || "").trim();
 
-// Obtener datos reales guardados
-const nombre = localStorage.getItem("nombreRunner");
-const edad = localStorage.getItem("edadRunner");
-const peso = localStorage.getItem("pesoRunner");
-const estatura = localStorage.getItem("estaturaRunner");
-const objetivo = localStorage.getItem("objetivoRunner");
-const sexo = localStorage.getItem("sexoRunner");
+  const tipoPlan = (typeof planType !== "undefined" && planType) ? planType : "General";
 
-let mensaje = "Hola María,\n\n";
-mensaje += "Quiero completar el pago de mi Plan Runner (" + planType + ").\n\n";
-mensaje += "Mis datos:\n";
+  let mensaje = `Hola María 👋\n\nQuiero completar el pago de mi Plan Runner (${tipoPlan}).\n\nMis datos:\n`;
 
-if (nombre) mensaje += "• Nombre: " + nombre + "\n";
-if (sexo) mensaje += "• Sexo: " + sexo + "\n";
-if (edad) mensaje += "• Edad: " + edad + "\n";
-if (peso) mensaje += "• Peso: " + peso + "\n";
-if (estatura) mensaje += "• Estatura: " + estatura + "\n";
-if (objetivo) mensaje += "• Objetivo: " + objetivo + "\n";
+  // ✅ solo agrega lo que el usuario llenó
+  if (nombre) mensaje += `• Nombre: ${nombre}\n`;
+  if (sexo) mensaje += `• Sexo: ${sexo}\n`;
+  if (edad) mensaje += `• Edad: ${edad} años\n`;
+  if (peso) mensaje += `• Peso: ${peso} kg\n`;
+  if (estatura) mensaje += `• Estatura: ${estatura} cm\n`;
+  if (volumen) mensaje += `• Volumen semanal: ${volumen}\n`;
+  if (objetivo) mensaje += `• Objetivo: ${objetivo}\n`;
 
-mensaje += "\nEstoy listo/a para desbloquear mi plan completo.";
+  mensaje += `\nEstoy listo/a para desbloquear mi plan completo.`;
 
-const whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(mensaje);
-
-window.open(whatsappURL, "_blank");
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(mensaje)}`;
+  window.open(whatsappURL, "_blank");
 });
+
 
 
     </script>
