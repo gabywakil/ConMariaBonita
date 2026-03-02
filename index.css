@@ -89,10 +89,11 @@ body {
 .quote-text {
     font-size: 17px;
     line-height: 1.6;
-    color: #2d2d2d;
-    font-style: italic;
+    color: #46583A;
+    font-style: normal;
     text-align: center;
     font-family: 'Georgia', serif;
+    font-weight: 700;
 }
 
 .quote-mark {
@@ -408,5 +409,6 @@ body {
         transform: translateY(0);
     }
 }
+
 
 
