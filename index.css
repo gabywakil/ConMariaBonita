@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Georgia', 'Times New Roman', serif;
-    background: linear-gradient(to bottom, #f5f1e8 0%, #EFE6CE 100%);
+    background: linear-gradient(135deg, #788B6A 0%, #46583A 100%);
     min-height: 100vh;
     color: #1a1a1a;
 }
@@ -28,9 +28,9 @@ body {
     height: 180px;
     margin: 0 auto 20px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #788B6A 0%, #46583A 100%);
+    background: linear-gradient(to bottom, #f5f1e8 0%, #EFE6CE 100%);
     padding: 8px;
-    box-shadow: 0 0 40px rgba(120, 139, 106, 0.4);
+    box-shadow: 0 0 40px rgba(245, 241, 232, 0.4);
 }
 
 .profile-image {
