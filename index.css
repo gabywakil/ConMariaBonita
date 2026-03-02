@@ -289,6 +289,14 @@ body {
     font-family: 'Georgia', serif;
 }
 
+.copyright-logo {
+    width: 60px;
+    height: auto;
+    margin-top: 8px;
+    opacity: 0.85;
+    border-radius: 6px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 480px) {
     .container {
@@ -409,6 +417,7 @@ body {
         transform: translateY(0);
     }
 }
+
 
 
 
