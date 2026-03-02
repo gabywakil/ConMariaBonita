@@ -455,13 +455,6 @@ body {
     }
 }
 
-.section-quote {
-    font-style: italic;
-    font-size: 14px;
-    margin: 14px 0 6px;
-    color: #ffffff;
-}
-
 .highlight-quote {
     font-weight: 600;
     margin-top: 20px;
@@ -492,7 +485,7 @@ body {
     font-size: 14px;
     line-height: 1.5;
     color: #4A4A4A;
-    background: rgba(255, 255, 255, 0.85);
+    background: #ffffff;
     padding: 12px 14px;
     border-radius: 14px;
 }
@@ -500,7 +493,7 @@ body {
 /* CERTIFICATIONS SECTION */
 .certifications-section {
     text-align: left;
-    background-color: rgba(255, 255, 255, 0.15);
+    background: #EFE6CE;
 }
 
 .certifications-section .section-text {
@@ -516,10 +509,10 @@ body {
 
 /* Card */
 .certification-card {
-    background: rgba(255, 255, 255, 0.85);
+    background: #ffffff;
     border-radius: 16px;
     padding: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transition: transform 0.3s ease;
 }
 
