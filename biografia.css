@@ -279,7 +279,7 @@ body {
 }
 
 .value-card {
-    background: rgba(255, 255, 255, 0.15);
+    background: #EFE6CE;
     padding: 20px;
     border-radius: 16px;
     text-align: center;
@@ -288,14 +288,14 @@ body {
 
 .value-card:active {
     transform: scale(0.98);
-    background: rgba(255, 255, 255, 0.2);
+    background: #e8dfc5;
 }
 
 .value-icon {
     width: 56px;
     height: 56px;
     margin: 0 auto 12px;
-    background: rgba(255, 255, 255, 0.2);
+    background: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -304,19 +304,19 @@ body {
 }
 
 .value-icon svg {
-    stroke: #ffffff;
+    stroke: #46583A;
 }
 
 .value-name {
     font-size: 15px;
     font-weight: 700;
-    color: #ffffff;
+    color: #46583A;
     font-family: 'Georgia', serif;
 }
 
 .value-description {
     font-size: 13px;
-    color: #EFE6CE;
+    color: #4b5563;
     margin-top: 6px;
     line-height: 1.4;
 }
@@ -473,7 +473,7 @@ body {
 }
 
 .fun-facts-section {
-    background: rgba(255, 255, 255, 0.15);
+    background: #EFE6CE;
     border-radius: 18px;
     padding: 20px;
 }
