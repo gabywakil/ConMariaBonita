@@ -44,7 +44,7 @@ body {
 .profile-name {
     font-size: 32px;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #ffffff;
     margin-bottom: 12px;
     font-family: 'Georgia', serif;
 }
@@ -53,7 +53,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: #46583A;
+    color: #EFE6CE;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.5px;
